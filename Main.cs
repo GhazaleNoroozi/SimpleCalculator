@@ -1,9 +1,10 @@
-Class Main(){
+class Main(){
     static void Main(strings[] args){
-        Console.WriteLine("calculator:\n");
-        boolean isContinued = true;
+        Console.WriteLine("Welcome!\nOperations you can use: * / - + ()";
         while(isContinued){
-            isContinued = Input.getInput();
-        }           
+            Console.WriteLine("Wanna continue ? [y/n]");
+            c = console.ReadKey().keyChar();
+            isContinued = (c == 'y') ? true : false; 
+        }
     }
 }

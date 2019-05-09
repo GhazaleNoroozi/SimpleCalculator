@@ -1,6 +1,7 @@
 class Input{
-    private static string‌ {get;}
+    private static String str {get; set;}
     public static bool getInput(){
-        string = Console.ReadLine();
+        str = Console.ReadLine();
+        Handle.handle(str);
     }
 }
