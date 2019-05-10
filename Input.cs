@@ -1,7 +1,12 @@
+using System;
 class Input{
-    private static String str {get; set;}
-    public static bool getInput(){
-        str = Console.ReadLine();
-        Handle.handle(str);
+    private static string str {get; set;}
+    public static void getInput(){
+        while(true){
+            str = Console.ReadLine();
+            if(Handle.handle(str))
+                break;
+            Console.WriteLine("Invalid input.Try again:");
+        }
     }
 }

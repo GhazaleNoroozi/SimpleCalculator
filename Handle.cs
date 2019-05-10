@@ -1,6 +1,7 @@
 using System; 
+//Suppose we know it is valid!
 class Handle{
-    public static void handle(String str){
-        
+    public static bool handle(String str){
+        return true;
     }
 }
