@@ -4,9 +4,11 @@ class Input{
     public static void getInput(){
         while(true){
             str = Console.ReadLine();
-            if(Handle.handle(str))
-                break;
-            Console.WriteLine("Invalid input.Try again:");
+            if(!Handle.handle(str)){
+                Console.WriteLine("Invalid input.Try again:");
+                continue;
+            }
+            break;
         }
     }
 }

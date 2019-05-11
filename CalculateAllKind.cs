@@ -5,7 +5,7 @@ class CalculateAllKind{
         comp = new CalculateComplicatedOperation();
     }
 
-    public double Calculate(string str){//todo exceptions division by zero and cant convert to double
+    public double Calculate(string str){
         int beg = -1;
         int end = str.Length;
         double d;
@@ -15,7 +15,7 @@ class CalculateAllKind{
                 if(str[i] == ')'){
                     end = i;
                     d = comp.calculate(str.Substring(beg + 1, end - beg - 1));
-                    if(str.Substring(beg + 1, end - beg - 1).)
+                    // if(str.Substring(beg + 1, end - beg - 1)) todo
                     if(d >= 0)
                         str = str.Substring(0, beg) + d + str.Substring(end + 1, str.Length - end - 1);
                     else

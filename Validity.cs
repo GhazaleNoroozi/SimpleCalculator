@@ -1,5 +1,6 @@
 using System.Text.RegularExpressions;
 using System.Collections.Generic;
+using System;
 class Validity{
     private string str;
     public Validity(string str){
@@ -14,7 +15,7 @@ class Validity{
     }
 
     private bool charactersAreValid(){
-        return Regex.Match(str,"^[*-+/().0-9]*$").Success;
+        return Regex.Match(str,@"^[\-*+/().0123456789]*$").Success;
     }
 
     private bool parathesesAreValid(){
@@ -42,10 +43,10 @@ class Validity{
                         return true;
                     if(isNumber(str[i - 1]) & str[i+1] == '(')
                         return true;
-                    if(str[i-1] == ')' & isNumber(str[i + 1]))
+                    if(str[i - 1] == ')' & isNumber(str[i + 1]))
                         return true;
                     if(str[i] == '+' | str[i] == '-')
-                        if(str[i-1] == '(' & isNumber(str[i + 1]))
+                        if(str[i - 1] == '(' & isNumber(str[i + 1]))
                             return true;
                     return false;
                 }
@@ -57,8 +58,7 @@ class Validity{
     }
 
     private bool isNumber(char c){
-        if(c == '0' | c == '1' | c == '2' | c == '3' | c == '4' 
-        | c == '5' | c == '6' | c == '7' | c == '8' | c == '9')
+        if(c == '0' | c == '1' | c == '2' | c == '3' | c == '4' | c == '5' | c == '6' | c == '7' | c == '8' | c == '9')
             return true;
         return false;
     }
