@@ -15,7 +15,6 @@ class CalculateAllKind{
                 if(str[i] == ')'){
                     end = i;
                     d = comp.calculate(str.Substring(beg + 1, end - beg - 1));
-                    // if(str.Substring(beg + 1, end - beg - 1)) todo
                     if(d >= 0)
                         str = str.Substring(0, beg) + d + str.Substring(end + 1, str.Length - end - 1);
                     else
