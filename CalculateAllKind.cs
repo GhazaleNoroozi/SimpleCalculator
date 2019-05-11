@@ -1,9 +1,7 @@
 using System;
 public class CalculateAllKind{
-    string str;
     CalculateComplicatedOperation comp;
     public CalculateAllKind(){
-        this.str = "";
         comp = new CalculateComplicatedOperation();
     }
 
@@ -22,7 +20,6 @@ public class CalculateAllKind{
                         str = str.Substring(0, beg) + d + str.Substring(end + 1, str.Length - end - 1);
                     else
                         str = str.Substring(0, beg) + "(" + d + ")" + str.Substring(end + 1, str.Length - end - 1);
-                    Console.WriteLine("hii:" + str);
                     break;
                 }
             }  

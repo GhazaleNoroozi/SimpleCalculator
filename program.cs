@@ -1,8 +1,8 @@
 using System;
 namespace Calculator {
     class Program{
-        public static char c;
-        public static bool isContinued;
+        // public static char c;
+        // public static bool isContinued;
         static void Main(string[] args){
             // Console.WriteLine("Welcome!\nOperations you can use: * / - + ()");
             // while(isContinued){
@@ -12,7 +12,7 @@ namespace Calculator {
             
             // }
             CalculateAllKind c = new CalculateAllKind();
-            Console.WriteLine(c.Calculate("((2*(3))+3)"));
+            Console.WriteLine(c.Calculate("((2))"));
         }
     }
 }

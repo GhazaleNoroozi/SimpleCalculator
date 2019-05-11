@@ -1,22 +1,22 @@
 using System.Text.RegularExpressions;
 class Validity{
-    private string str; //todo remove withespace
+    private string str;
     public Validity(string str){
         this.str = str;
     }
 
     public bool isValid(){
-        if(charactersAreValid() & parathesesAreValid())// && parathesesIsValid() &&‌ operationsIsValid() && floatingPointIsValid()){
+        if(charactersAreValid() & parathesesAreValid())// operationsIsValid()
             return true;
         else
             return false;
     }
 
     public bool charactersAreValid(){
-        return Regex.Match(str,"^[*-+/().]*$").Success;
+        return Regex.Match(str,"^[*-+/().0-9]*$").Success;
     }
 
-    public bool parathesesAreValid(){
+    public bool parathesesAreValid(){//todo doesnot work ... should use stack
         int count = 0;
         foreach(char c in str){
             if(c == '(')
@@ -30,5 +30,7 @@ class Validity{
         return true;
     }
 
-    
+    public bool operationsAreValid(){//todo complete this
+        return true;
+    }
 }
