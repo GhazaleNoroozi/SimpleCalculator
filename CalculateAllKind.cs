@@ -1,5 +1,5 @@
 using System;
-public class CalculateAllKind{
+class CalculateAllKind{
     CalculateComplicatedOperation comp;
     public CalculateAllKind(){
         comp = new CalculateComplicatedOperation();

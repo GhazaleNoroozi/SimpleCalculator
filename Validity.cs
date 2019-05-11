@@ -7,17 +7,17 @@ class Validity{
     }
 
     public bool isValid(){
-        if(charactersAreValid() & parathesesAreValid())
+        if(charactersAreValid() & parathesesAreValid() & operationsAreValid())
             return true;
         else
             return false;
     }
 
-    public bool charactersAreValid(){
+    private bool charactersAreValid(){
         return Regex.Match(str,"^[*-+/().0-9]*$").Success;
     }
 
-    public bool parathesesAreValid(){
+    private bool parathesesAreValid(){
         Stack<char> brackets = new Stack<char>();
         try{
             foreach (char c in str){
@@ -34,7 +34,7 @@ class Validity{
         return brackets.Count == 0 ? true : false;
     }
 
-    public bool operationsAreValid(){
+    private bool operationsAreValid(){
         try{
             for(int i = 0; i < str.Length; i ++){
                 if(str[i] == '*' | str[i] == '/' | str[i] == '+' | str[i] == '-'){

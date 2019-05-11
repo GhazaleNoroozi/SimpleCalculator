@@ -1,6 +1,6 @@
 using System;
 class CalculateComplicatedOperation{
-    public string str;
+    string str;
     public CalculateComplicatedOperation(){
         this.str = "";
     }
