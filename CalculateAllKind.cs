@@ -5,8 +5,7 @@ public class CalculateAllKind{
         comp = new CalculateComplicatedOperation();
     }
 
-    //supposed parathesis are valid.
-    public double Calculate(string str){
+    public double Calculate(string str){//todo exceptions division by zero and cant convert to double
         int beg = -1;
         int end = str.Length;
         double d;
@@ -16,6 +15,7 @@ public class CalculateAllKind{
                 if(str[i] == ')'){
                     end = i;
                     d = comp.calculate(str.Substring(beg + 1, end - beg - 1));
+                    if(str.Substring(beg + 1, end - beg - 1).)
                     if(d >= 0)
                         str = str.Substring(0, beg) + d + str.Substring(end + 1, str.Length - end - 1);
                     else

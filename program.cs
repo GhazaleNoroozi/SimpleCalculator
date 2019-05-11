@@ -12,7 +12,7 @@ namespace Calculator {
             
             // }
             CalculateAllKind c = new CalculateAllKind();
-            Console.WriteLine(c.Calculate("((2))"));
+            Console.WriteLine(c.Calculate("((2))"));//todo bug
         }
     }
 }
